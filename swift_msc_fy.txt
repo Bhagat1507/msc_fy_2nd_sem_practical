@@ -1,0 +1,140 @@
+1)	Write a Swift program to check if a given non-negative number is a multiple of 3 or a multiple of 5.
+->
+func test(num:Int)->Bool{
+    if num%3==0||num%5==0{
+        return true
+    }
+    else{
+        return false
+    }
+}
+
+print(test(num:15))
+
+2)	Write a Swift program that return true if either of two given integers is in the range 10..30 inclusive
+->
+func range(num1:Int,num2:Int)->Bool{
+    if num1>=10 && num1<=30 || num2>=10 && num2<=30{
+        return true
+    }
+    else{
+        return false
+    }
+}
+
+print(range(num1:12,num2:99))
+
+3)	Write a Swift program to accept two integer values and return true if one is negative and one is positive. Return true only if both are negative.
+->
+func true_neg(num1:Int,num2:Int)->Bool{
+    if num1<0 || num2<0{
+        return true
+    }
+    else{
+        return false
+    }
+}
+print(true_neg(num1:-12,num2:-12))
+
+4)	Write a Swift program that accept two integer values and return true if one of them is 20 or if their sum is 20.
+->
+func sum_int_20(num1:Int,num2:Int)->Bool{
+    if num1==20||num2==20||(num1+num2)==20{
+        return true
+    }
+    else{
+        return false
+    }
+}
+
+print(sum_int_20(num1:10,num2:10))
+print(sum_int_20(num1:20,num2:30))
+
+5)	Write a Swift program that accept two integer values and test if they are both in the range 20..30 inclusive, or they are both in the range 30..40 inclusive.
+->
+func range(num1:Int,num2:Int)->Bool{
+    if num1>=20 && num1<=30 && num2>=20 && num2<=30{
+        return true
+    }
+    else if num1>=30 && num1<=40 && num2>=30 && num2<=40 {
+        return true
+    }
+    else{
+        return false
+    }
+}
+print(range(num1:33,num2:39))
+
+6)	Write a Swift program to test whether the last digit of the two given non-negative integer values are same or not.
+->
+func same_last_n(num1:Int,num2:Int)->Bool{
+    if num1>=9 && num2>=9{
+        if num1%100 == num2%100{
+            return true
+        }
+        else{
+            return false
+        }
+    }
+    else{
+        return false
+    }
+}
+
+print(same_last_n(num1:23,num2:123))
+
+7)	Write a Swift program to compute and return the absolute difference of n and 51, if n is over 51 return double the absolute difference
+->
+func diff_51(num1:Int)->Int{
+    if num1>51{
+        return (num1-51)*2
+    }
+    else{
+        return (51-num1)
+    }
+}
+print(diff_51(num1:72))
+
+8)	Write a Swift program to add "Is" to the front of a given string. However, if the string already begins with "Is", return the given string.
+->
+import Foundation
+func string_word(word:String)->String{
+    if word.hasPrefix("Is"){
+        return word
+    }
+    else{
+        return "Is\(word)"
+    }
+    
+}
+print(string_word(word:"Isswift"))
+
+9)	Write a Swift program to find the largest number among three given integers
+->
+func three_max(num1:Int,num2:Int,num3:Int)->Int{
+	if num1>num2 && num2>num3{
+		return num1
+	}
+	else if num1<num2 && num2>num3{
+		return num2
+	}
+	else{
+		return num3
+	}    
+}
+print(three_max(num1:42,num2:23,num3:63))
+
+10)	Write a Swift program that accept two integer values and to test which value is nearest to the value 10, or return 0 if both integers have same distance from 10.
+->
+func greater_10(num1:Int,num2:Int)->Int{
+    if abs(10-num1)>abs(10-num2){
+        return num2
+    }
+    else if abs(10-num1)<abs(10-num2){
+        return num1
+    }
+    else{
+        return 0
+    }
+}
+print(greater_10(num1:9,num2:4))
